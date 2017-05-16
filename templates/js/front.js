@@ -1,5 +1,7 @@
 //($('#gmailDiv').hide(); 
 //se crea una funcion
+
+
 function abrirNoticias() {
     //	 
     $('#notiDiv').show();
@@ -237,7 +239,7 @@ $(document).ready(function() {
     var temperatura;
     var clima;
     var myImage = new Image(100, 100);
-    myImage.src = "nube1.png";
+    myImage.src = "Images/nube1.png";
     var urlimg;
     //variables clima
     setInterval(startClima, 3000);
@@ -253,24 +255,24 @@ function startClima() {
         switch (clima) { //traduccion del clima y cambio de imagen
             case "Clear":
                 clima = "Despejado";
-                urlimg = "nube1.png";
+                urlimg = "Images/nube1.png";
                 break;
 
             case "Rain":
                 clima = "Lluvioso";
-                urlimg = "nube2.png";
+                urlimg = "Images/nube2.png";
                 break;
             case "Clouds":
                 clima = "Nublado";
-                urlimg = "nube3.png";
+                urlimg = "Images/nube3.png";
                 break;
             case "Snow":
                 clima = "Nevado";
-                urlimg = "nube4.png";
+                urlimg = "Images/nube4.png";
                 break;
             case "Drizzle":
                 clima = "Lluvioso";
-                urlimg = "nube2.png";
+                urlimg = "Images/nube2.png";
                 break;
         }
         document.getElementById('temperatura').innerHTML = temperatura.toFixed(1) + "&ordm " //pasar temperatura al html
