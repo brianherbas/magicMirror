@@ -1,0 +1,178 @@
+#notiDiv {
+		  position: absolute;	  
+		  width:740px;
+		  z-index: 1000;
+		  float: left;
+		  min-width: 100px;
+		  padding: 5px 0;
+		  margin-left: 10px ;
+		  transform: rotate(-90deg);
+		  top: 20;
+		  text-align: left;
+			right:10;
+		}		
+	
+	body{
+background:#000000;
+color:#FFFFFF; 
+font: 2em/1 "HKGroteskLight","Segoe UI Light",Tahoma,sans-serif;
+
+}
+      iframe {
+        width: 90%;
+        border: 0;
+        
+        height: 600px;
+        display: flex;
+      }
+	  #gmailDiv{
+		  position: absolute;	  
+		  width:750px;
+		  z-index: 1000;
+		  float: left;
+		  min-width: 100px;
+		  transform: rotate(-90deg);
+		  text-align: left;
+		  right:0;
+		  top: 40;
+			
+		}
+	  
+	  
+
+
+body{
+background:#000000;
+color:#FFFFFF; 
+font: 2em/1 "HKGroteskLight","Segoe UI Light",Tahoma,sans-serif;
+/*
+transform: rotate(-90deg);
+*/
+
+
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 768px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #000;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+
+#upper-right
+{
+
+}
+#divhorafecha
+{
+position: absolute;
+bottom:10%;
+left:-2%;
+transform: rotate(-90deg);
+}
+#hora {
+font-size:100px;
+color:#FFFFFF;
+}
+#fecha{
+font-size:29px;
+
+}
+#temperatura{
+
+font-size:50px;
+
+}
+#clima 
+{
+font-size: 37px;
+
+}
+.divweather
+{
+max-width: 300px;
+
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+   top: 20%;
+ right:5%;
+}
+#nube
+{
+position: absolute;
+top: 5%;
+left:-20px;
+transform: rotate(-90deg);
+width:220px;
+}
+#myImg
+{
+position:absolute;
+transform: rotate(-90deg);
+margin-top: 15px;
+margin-left:40px;
+}
+.mirror{
+transform:rotate(-90deg);
+transform-origin: left top 0px;
+  position: relative;
+  top: 1430px;
+}
+.dropup{
+ position: absolute;
+ text-align: center;
+ transform:rotate(-90deg);
+
+}
+.botonNoticias{
+position:absolute;
+top:48%;
+ right:31%;
+}
+.botonGmail
+{
+position:absolute;
+top:48%;
+ right:30%;
+}
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  width:765px;
+  
+}
