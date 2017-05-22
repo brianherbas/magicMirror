@@ -1,7 +1,7 @@
 import web
 import urlparse
 import json
-mport RPi.GPIO as GPIO
+#import RPi.GPIO as GPIO
 
 def make_text(string):
     return string
