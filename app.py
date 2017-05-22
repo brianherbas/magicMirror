@@ -7,7 +7,8 @@ def make_text(string):
     return string
 
 urls = (
-		'/', 'index'
+		'/', 'index',
+		'/lz', 'luz'
 		)
 render = web.template.render('templates/')
 
@@ -17,10 +18,10 @@ app = web.application(urls, globals())
 #                web.form.Textbox('', class_='textfield', id='textfield'),
 #                )
 
-class index:
+class luz:
     def GET(self):
         #form = my_form()
-        return render.index()
+        return render.luz()
         
     def POST(self):
 		parsed = urlparse.urlparse(web.data())
@@ -38,6 +39,10 @@ class index:
 			GPIO.cleanup()
 	
 		return json.dumps({'msg': estado})
+		
+class index:
+    def GET(self):
+        return render.index()		
 		
 
 if __name__ == '__main__':
