@@ -3,7 +3,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		
 		
-		<link rel="stylesheet" type="text/css" href="static/css/styles.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="css/styles.css" media="screen">
 		
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
 		<!--
@@ -13,17 +13,22 @@
 		<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
 		<!--Comandos de voz-->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/speechkitt.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/speechkitt.min.js"></script>	
 		
-			
-		<script src="static/js/tiempo.js" type="text/javascript"></script>	
-		<script src="static/js/clima.js" type="text/javascript"></script>	
-		<script src="static/js/comandosdevoz.js" type="text/javascript"></script>	
-		<script src="static/js/noticias.js" type="text/javascript"></script>	
-		<script src="static/js/gmail.js" type="text/javascript"></script>	
+		<script src="js/comandosdevozsource.js" type="text/javascript"></script>		
+		<script src="js/tiempo.js" type="text/javascript"></script>	
+		<script src="js/clima.js" type="text/javascript"></script>	
+		<script src="js/comandosdevoz.js" type="text/javascript"></script>	
+		<script src="js/noticias.js" type="text/javascript"></script>	
+		<script src="js/gmail.js" type="text/javascript"></script>	
 		
 	</head>
 	<body>
+	<!--<input onclick="responsiveVoice.speak('Hello World');" type="button" value="Play" />-->
+	<script>
+	//https://responsivevoice.org/api/
+     responsiveVoice.speak("hola brian", "Spanish Latin American Female");
+	</script>
 		<!--BLOQUE DE FECHA Y HORA-->
 		<div id="divhorafecha">
 			<div id="hora">
