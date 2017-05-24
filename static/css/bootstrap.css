@@ -1582,10 +1582,19 @@ pre code {
   overflow-y: scroll;
 }
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+
+  transform: rotate(-90deg);
+  right: 5px;
+  position: absolute;
+   position: absolute;
+    width: 750px;
+    z-index: 1000;
+    float: left;
+    max-width: 751px;
+    transform: rotate(-90deg);
+    text-align: left;
+    right: 0;
+    top: 40;
 }
 @media (min-width: 768px) {
   .container {
@@ -5870,15 +5879,16 @@ button.close {
 }
 .modal {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+
+  margin: auto auto;
   z-index: 1050;
   display: none;
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
   outline: 0;
+  transform: rotate(-90deg);
+  max-width:740px;
+  
 }
 .modal.fade .modal-dialog {
   -webkit-transition: -webkit-transform .3s ease-out;
@@ -5901,7 +5911,7 @@ button.close {
 }
 .modal-dialog {
   position: relative;
-  width: auto;
+  width: 730px;
   margin: 10px;
 }
 .modal-content {

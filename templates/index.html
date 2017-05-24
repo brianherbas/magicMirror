@@ -2,15 +2,16 @@
 	<head content="text/html; charset=utf-8" >
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		
-		
+		<link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="static/css/styles.css" media="screen">
+		
 		
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
 		<!--
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="screen">
 		-->
-		<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+		
 		<!--Comandos de voz-->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/speechkitt.min.js"></script>	
@@ -20,7 +21,10 @@
 		<script src="static/js/comandosdevoz.js" type="text/javascript"></script>	
 		<script src="static/js/noticias.js" type="text/javascript"></script>	
 		<script src="static/js/gmail.js" type="text/javascript"></script>	
-	
+		<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+		
+		
+    
 		
 		
 	</head>
@@ -45,21 +49,6 @@
 			</div>		
 		</div>
 		<!--FIN BLOQUE DEL CLIMA-->
-		<!--BLOQUE DE GMAIL-->
-		<div class="divs" id="gmailDiv">
-			<button id="authorize-button" class="btn btn-primary hidden" style="margin: 45px 0px 0px 0px; text-align:right; position:absolute; text-transform:uppercase;">Gmail</button>
-			<table class="table table-inbox hidden">
-				<thead>
-					<tr>
-						<th>De:</th>
-						<th>Asunto:</th>
-						<th>Fecha:</th>
-					</tr>
-				</thead>
-				<tbody></tbody>
-			</table>
-		</div>
-		<!--FIN BLOQUE DE GMAIL-->
 		<!--BLOQUE DE NOTICIAS-->
 		<div class="botonNoticiasyMai">
 			<div class='row'>
@@ -73,5 +62,21 @@
 			</div>
 		</div>
 		<!--FIN BLOQUE DE GMAIL-->
+		<!--BLOQUE DE GMAIL-->
+		<div class="container">
+			<button id="authorize-button" class="btn btn-primary hidden" style="margin: 45px 0px 0px 0px; text-align:right; position:absolute; text-transform:uppercase;">Gmail</button>
+			<table class="table  table-inbox hidden">
+				<thead>
+					<tr>
+						<th>De:</th>
+						<th>Asunto:</th>
+						<th>Fecha:</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+		<!--FIN BLOQUE DE GMAIL-->
+		
 	</body>
 </html>
