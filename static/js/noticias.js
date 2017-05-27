@@ -12,7 +12,7 @@ $.get("https://www.clarin.com/rss/lo-ultimo/", function(data) {
                 description: $this.find("description").text(),
                 pubDate: $this.find("pubDate").text(),
             }
-        
+        //Do something with item here...
         //var month = item.pubDate.getUTCMonth() + 1; //months from 1-12
         //var day = item.pubDate.getUTCDate();
 

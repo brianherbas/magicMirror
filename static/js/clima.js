@@ -7,8 +7,9 @@ $(document).ready(function() {
     var myImage = new Image(100, 100);
     //myImage.src = "images/nube1.png";
     //variables clima
-    setInterval(startClima, 3000);
-    setInterval(startTime, 1000);
+	startClima();
+    setInterval(startClima, 60000);
+    
 });
 
 function startClima() {

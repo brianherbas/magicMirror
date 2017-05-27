@@ -1,3 +1,7 @@
+$(document).ready(function() {
+	startTime();
+setInterval(startTime, 1000);
+});
 function startTime() {
 
 
