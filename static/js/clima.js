@@ -31,15 +31,15 @@ function startClima() {
                 break;
             case "Clouds":
                 clima = "Nublado";
-                urlimg = "images/nube3.png";
+                urlimg = "nube3.png";
                 break;
             case "Snow":
                 clima = "Nevado";
-                urlimg = "images/nube4.png";
+                urlimg = "nube4.png";
                 break;
             case "Drizzle":
                 clima = "Lluvioso";
-                urlimg = "images/nube2.png";
+                urlimg = "nube2.png";
                 break;
         }
 	urlimg = urlimgCONF+urlimg;
