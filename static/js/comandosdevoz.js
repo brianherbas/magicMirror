@@ -51,6 +51,36 @@ function pedirClima() {
 	responsiveVoice.speak( "está " + document.getElementById("clima").innerHTML);
     //
 }
+function prenderLuz1() {
+    //	 
+    interruptor(1,"prender");
+    //
+}
+function apagarLuz1() {
+    //	 
+    interruptor(1,"apagar");
+    //
+}
+function prenderLuz2() {
+    //	 
+    interruptor(2,"prender");
+    //
+}
+function apagarLuz2() {
+    //	 
+    interruptor(2,"apagar");
+    //
+}
+function prenderLuz3() {
+    //	 
+    interruptor(3,"prender");
+    //
+}
+function apagarLuz3() {
+    //	 
+    interruptor(3,"apagar");
+    //
+}
 
 
 
@@ -86,6 +116,24 @@ if (annyang) {
         },
 		'clima': function() {
             pedirClima();
+        },
+		'prender luz 1': function() {
+            prenderLuz1();
+        },
+		'apagar luz 1': function() {
+            apagarLuz1();
+        },
+		'prender luz 2': function() {
+            prenderLuz2();
+        },
+		'apgar luz 2': function() {
+            apagarLuz2();
+        },
+		'prender luz 3': function() {
+            prenderLuz3();
+        },
+		'apagar luz 3': function() {
+            apagarLuz3();
         },
 
 

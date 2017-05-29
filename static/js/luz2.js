@@ -14,17 +14,17 @@ var urlAjax = "http://10.3.87.97:8080/lz";
 
 
 
-	function interruptor(inNum)
+	function interruptor(inNum,orden)
 	{			
-		var image = document.getElementById('interruptor1');
+		var image = document.getElementById('interruptor'+inNum);
 		var estado;
 		
-		if (image.src.match("t"+inNum)) {
+		if (orden=="apagar") {
         		image.src = "static/images/f"+inNum+".png";
 			estado = "apagado"+inNum;
 			jQuery("#val"+inNum).val("Apagado");
 		}
-		if (image.src.match("t"+inNum)) {
+		if (orden=="prender") {
         		image.src = "static/images/t"+inNum".png";
 			estado = "encedido"+inNum;
 			jQuery("#val"+inNum).val("Encendido");	
