@@ -126,7 +126,7 @@ if (annyang) {
 		'prender luz 2': function() {
             prenderLuz2();
         },
-		'apgar luz 2': function() {
+		'apagar luz 2': function() {
             apagarLuz2();
         },
 		'prender luz 3': function() {

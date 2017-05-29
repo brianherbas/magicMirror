@@ -1,7 +1,7 @@
 import web #libreria para simular web-server
 import urlparse
 import json
-import RPi.GPIO as GPIO  #libreria para usar los pines de la raspberry
+#import RPi.GPIO as GPIO  #libreria para usar los pines de la raspberry
 
 def make_text(string):
     return string
