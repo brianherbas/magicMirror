@@ -34,8 +34,11 @@ class luz():
 		estado = urlparse.parse_qs(parsed.path)['estado'][0]
 		
 		if(estado=="prender1"):
-			GPIO.setmode(GPIO.BCM)
+		    #Definimos el sistema de numeracion que queremos(BCM o BOARD)
+			GPIO.setmode(GPIO.BCM) 
+			#Definimos el pin GPIO 17 como una salida
 			GPIO.setup(17, GPIO.OUT)
+			#Le asignamos como valor logico
 			GPIO.output(17, GPIO.HIGH)
 		else:
 			if(estado=="apagar1"):		
@@ -55,7 +58,6 @@ class luz():
 				GPIO.output(27, GPIO.LOW)
 				GPIO.cleanup(27)			
 	
-		return json.dumps({'msg': estado})
 		
 		if(estado=="prender3"):
 			GPIO.setmode(GPIO.BCM)
