@@ -15,7 +15,7 @@ jQuery(document).ready(function() {
 							}
 					
 					jQuery.ajax({
-						url: "http://192.168.1.36:8080/lz", //modificar porque IP es dinamica
+						url: "http://10.3.87.97:8080/lz", //modificar porque IP es dinamica
 						type: "POST",
 						dataType:'json',
 						data: {"estado" : estado},
@@ -49,7 +49,7 @@ jQuery(document).ready(function() {
 							}					
 					
 					jQuery.ajax({
-						url: "http://192.168.1.36:8080/lz", //modificar porque IP es dinamica
+						url: "http://10.3.87.97:8080/lz", //modificar porque IP es dinamica
 						type: "POST",
 						dataType:'json',
 						data: {"estado" : estado},
@@ -81,7 +81,7 @@ jQuery(document).ready(function() {
 							}					
 					
 					jQuery.ajax({
-						url: "http://192.168.1.36:8080/lz", //modificar porque IP es dinamica
+						url: "http://10.3.87.97:8080/lz", //modificar porque IP es dinamica
 						type: "POST",
 						dataType:'json',
 						data: {"estado" : estado},
