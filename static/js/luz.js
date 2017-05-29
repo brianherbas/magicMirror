@@ -1,4 +1,4 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function pepe() {
 				jQuery(".button1").click(function() {
 					var estado = jQuery(this).val();
 					changeImage1()					
