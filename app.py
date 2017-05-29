@@ -36,15 +36,17 @@ class luz():
 		if(estado=="prender1"):
 		    #Definimos el sistema de numeracion que queremos(BCM o BOARD)
 			GPIO.setmode(GPIO.BCM) 
-			#Definimos el pin GPIO 17 como una salida
+			#Definimos el pin GPIO 17 como salida
 			GPIO.setup(17, GPIO.OUT)
-			#Le asignamos como valor logico
+			#Le damos un valor logico alto para encender el led 
 			GPIO.output(17, GPIO.HIGH)
 		else:
 			if(estado=="apagar1"):		
 				GPIO.setmode(GPIO.BCM)
 				GPIO.setup(17, GPIO.OUT)
+				#Le damos un valor logico bajo para apagar el led
 				GPIO.output(17, GPIO.LOW)
+				#Liberamos el pin GPIO 17
 				GPIO.cleanup(17)
 
 		if(estado=="prender2"):
