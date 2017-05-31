@@ -1,41 +1,55 @@
-#val1 {
+#button1 {
 	position: absolute;
-	top: 6%;
-	left: 11%;
-	text-align: center;
-	transform: rotate(-90deg);
+    top: 25%;
+    left: 15%;
+    transform: rotate(-90deg);
 	/*display: none;*/
 }
-#val2 {
+#button2 {
 	position: absolute;
-	top: 6%;
-	left: 16%;
-	text-align: center;
-	transform: rotate(-90deg);
+    top: 10%;
+    left: 15.4%;
+    transform: rotate(-90deg);
 }
-#val3 {
+#button3 {
 	position: absolute;
-	top: 6%;
-	left: 21%;
-	text-align: center;
-	transform: rotate(-90deg);
+    top: 25%;
+    left: 18%;
+    transform: rotate(-90deg);
 }
-
-#interruptor1
+#button4 {
+	position: absolute;
+    top: 10%;
+    left: 18.4%;
+    transform: rotate(-90deg);
+}
+#button5 {
+	position: absolute;
+    top: 25%;
+    left: 21%;
+    transform: rotate(-90deg);
+}
+#button6 {
+	position: absolute;
+    top: 10%;
+    left: 21.4%;
+    transform: rotate(-90deg);
+}
+#myImage1
+{
+	position: absolute;
+	top: 25%;
+	left: 12%;
+}
+#myImage2
+{
+	position: absolute;
+	top: 15%;
+	left: 12%;	
+}
+#myImage3
 {
 	position: absolute;
 	top: 5%;
-	left: 10%;
-}
-#interruptor2
-{
-	position: absolute;
-	top: 5%;
-	left: 15%;	
-}
-#interruptor3
-{
-	position: absolute;
-	top: 5%;
-	left: 20%;	
+	left: 12%;	
 }

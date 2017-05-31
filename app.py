@@ -1,6 +1,8 @@
 import web #libreria para simular web-server
 import urlparse
 import json
+import requests
+
 #import RPi.GPIO as GPIO  #libreria para usar los pines de la raspberry
 
 def make_text(string):
@@ -9,7 +11,8 @@ def make_text(string):
 #lista de directorios y la clase que abre en cada uno
 urls = (
 		'/', 'index',
-		'/lz', 'luz'
+		'/lz', 'luz',
+		'/noticias', 'noticias'
 		)
 		
 #la carpeta a donde va a buscar el index.html		
@@ -21,6 +24,10 @@ app = web.application(urls, globals())
 #                web.form.Textbox('', class_='textfield', id='textfield'),
 #                )
 
+
+class noticias():
+    def GET(self):
+        return requests.get("https://www.clarin.com/rss/lo-ultimo/")
 
 #control de los pines (17)
 class luz():
@@ -36,17 +43,15 @@ class luz():
 		if(estado=="prender1"):
 		    #Definimos el sistema de numeracion que queremos(BCM o BOARD)
 			GPIO.setmode(GPIO.BCM) 
-			#Definimos el pin GPIO 17 como salida
+			#Definimos el pin GPIO 17 como una salida
 			GPIO.setup(17, GPIO.OUT)
-			#Le damos un valor logico alto para encender el led 
+			#Le asignamos como valor logico
 			GPIO.output(17, GPIO.HIGH)
 		else:
 			if(estado=="apagar1"):		
 				GPIO.setmode(GPIO.BCM)
 				GPIO.setup(17, GPIO.OUT)
-				#Le damos un valor logico bajo para apagar el led
 				GPIO.output(17, GPIO.LOW)
-				#Liberamos el pin GPIO 17
 				GPIO.cleanup(17)
 
 		if(estado=="prender2"):
