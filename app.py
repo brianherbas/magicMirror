@@ -1,6 +1,7 @@
 import web #libreria para simular web-server
 import urlparse
 import json
+import requests
 #import RPi.GPIO as GPIO  #libreria para usar los pines de la raspberry
 
 def make_text(string):
@@ -9,7 +10,8 @@ def make_text(string):
 #lista de directorios y la clase que abre en cada uno
 urls = (
 		'/', 'index',
-		'/sw', 'luz'
+		'/sw', 'luz',
+		'/noticias', 'noticias'
 		)
 		
 #la carpeta a donde va a buscar el index.html		
@@ -21,7 +23,9 @@ app = web.application(urls, globals())
 #                web.form.Textbox('', class_='textfield', id='textfield'),
 #                )
 
-
+class noticias():
+    def GET(self):
+        return requests.get("https://www.clarin.com/rss/lo-ultimo/")
 #control de los pines (17)
 class luz():
     #def GET(self):
@@ -37,12 +41,12 @@ class luz():
 		#Definimos 'Npin' como salida
 		GPIO.setup(NPin, GPIO.OUT)
  
-	if(orden=="on"):
+		if(orden=="on"):
 		#Le damos un valor logico alto para encender el led			
-		GPIO.output(NPin, GPIO.HIGH)
-			if(estado=="apagar1"):
+			GPIO.output(NPin, GPIO.HIGH)
+		if(orden=="off"):
 				#Le damos un valor logico bajo para apagar el led
-				GPIO.output(NPin, GPIO.LOW)						
+			GPIO.output(NPin, GPIO.LOW)						
 
 		
 #carga el render (/templates/index.html)
