@@ -1,4 +1,4 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function pepe() {
 				jQuery(".button1").click(function() {
 					var estado = jQuery(this).val();
 					changeImage1()					
@@ -7,7 +7,7 @@ jQuery(document).ready(function() {
 							this.disabled = true;
 							document.getElementById('button2').disabled = false;
 						}
-						
+						else
 							if(estado == 'apagar1')
 							{
 							this.disabled = true;
@@ -29,10 +29,10 @@ jQuery(document).ready(function() {
 					});
 					
 				});
+			});
 			
 			
-			
-			
+jQuery(document).ready(function() {			
 			jQuery(".button2").click(function() {
 					var estado = jQuery(this).val();
 					changeImage2()					
@@ -62,9 +62,9 @@ jQuery(document).ready(function() {
 						}
 					});
 				});
-					
+			});		
 
-		
+jQuery(document).ready(function() {			
 			jQuery(".button3").click(function() {
 					var estado = jQuery(this).val();
 					changeImage3()					
@@ -94,7 +94,7 @@ jQuery(document).ready(function() {
 						}
 					});
 				});
-				
+			});	
 			
 	function changeImage1() {
     var image = document.getElementById('myImage1');

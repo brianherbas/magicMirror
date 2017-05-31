@@ -1,8 +1,6 @@
 import web #libreria para simular web-server
 import urlparse
 import json
-import requests
-
 #import RPi.GPIO as GPIO  #libreria para usar los pines de la raspberry
 
 def make_text(string):
@@ -11,8 +9,7 @@ def make_text(string):
 #lista de directorios y la clase que abre en cada uno
 urls = (
 		'/', 'index',
-		'/lz', 'luz',
-		'/noticias', 'noticias'
+		'/sw', 'luz'
 		)
 		
 #la carpeta a donde va a buscar el index.html		
@@ -25,10 +22,6 @@ app = web.application(urls, globals())
 #                )
 
 
-class noticias():
-    def GET(self):
-        return requests.get("https://www.clarin.com/rss/lo-ultimo/")
-
 #control de los pines (17)
 class luz():
     #def GET(self):
@@ -38,46 +31,18 @@ class luz():
         
     def POST(self):
 		parsed = urlparse.urlparse(web.data())
-		estado = urlparse.parse_qs(parsed.path)['estado'][0]
-		
-		if(estado=="prender1"):
-		    #Definimos el sistema de numeracion que queremos(BCM o BOARD)
-			GPIO.setmode(GPIO.BCM) 
-			#Definimos el pin GPIO 17 como una salida
-			GPIO.setup(17, GPIO.OUT)
-			#Le asignamos como valor logico
-			GPIO.output(17, GPIO.HIGH)
-		else:
-			if(estado=="apagar1"):		
-				GPIO.setmode(GPIO.BCM)
-				GPIO.setup(17, GPIO.OUT)
-				GPIO.output(17, GPIO.LOW)
-				GPIO.cleanup(17)
-
-		if(estado=="prender2"):
-			GPIO.setmode(GPIO.BCM)
-			GPIO.setup(27, GPIO.OUT)
-			GPIO.output(27, GPIO.HIGH)
-		else:
-			if(estado=="apagar2"):
-				GPIO.setmode(GPIO.BCM)
-				GPIO.setup(27, GPIO.OUT)
-				GPIO.output(27, GPIO.LOW)
-				GPIO.cleanup(27)			
-	
-		
-		if(estado=="prender3"):
-			GPIO.setmode(GPIO.BCM)
-			GPIO.setup(22, GPIO.OUT)
-			GPIO.output(22, GPIO.HIGH)
-		else:
-			if(estado=="apagar3"):
-				GPIO.setmode(GPIO.BCM)
-				GPIO.setup(22, GPIO.OUT)
-				GPIO.output(22, GPIO.LOW)
-				GPIO.cleanup(22)			
-	
-		return json.dumps({'msg': estado})		
+		estado = urlparse.parse_qs(parsed.path)['orden']['NPin']
+  		#Definimos el sistema de numeracion que queremos(BCM o BOARD)
+		GPIO.setmode(GPIO.BCM)
+		#Definimos 'Npin' como salida
+		GPIO.setup(NPin, GPIO.OUT)
+ 
+	if(orden=="on"):
+		#Le damos un valor logico alto para encender el led			
+		GPIO.output(NPin, GPIO.HIGH)
+			if(estado=="apagar1"):
+				#Le damos un valor logico bajo para apagar el led
+				GPIO.output(NPin, GPIO.LOW)						
 
 		
 #carga el render (/templates/index.html)
