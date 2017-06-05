@@ -97,9 +97,9 @@ xml = xml[0].innerHTML;
     }
 
 
-        $("#itemNot").append('<h3 class="smaller">' + item.title + '</h3>');
+        $("#itemNot").append('<h1><b>' + item.title + '</b></h1>');
         $("#itemNot").append('<p class="date">'+mydate.getDate() +" de "+ mes +" l "+mydate.getHours()+":"+mydate.getMinutes()+'</p>');
-        $("#itemNot").append('<p>' + item.description + '</p>');
+        $("#itemNot").append('<p1><h3>' + item.description + '</h3></p>');
         $("#itemNot").append('<p>_______________________</p>');
         return i < 3
 
