@@ -1,3 +1,7 @@
+jQuery(document).ready(function() {
+jQuery('.container').hide();
+});
+
 var clientId = '743981775055-clrerrd2cnq2adjjk4q2095srims0es8.apps.googleusercontent.com';
 var apiKey = 'AIzaSyDsjV0utgJyzmKWLJy_idJOaZyBGZbGRJA';
 var scopes = 'https://www.googleapis.com/auth/gmail.readonly';
@@ -61,6 +65,48 @@ function displayInbox() {
 }
 
 function appendMessageRow(message) {
+var fecha = getHeader(message.payload.headers, 'Date');
+var myDate = new Date(fecha);
+switch (myDate.getMonth()) {
+        case 0:
+            mes = "Enero";
+            break;
+        case 1:
+            mes = "Febrero";
+            break;
+        case 2:
+            mes = "Marzo";
+            break;
+        case 3:
+            mes = "Abril";
+            break;
+        case 4:
+            mes = "Mayo";
+            break;
+        case 5:
+            mes = "Junio";
+            break;
+        case 6:
+            mes = "Julio";
+            break;
+        case 7:
+            mes = "Agosto";
+            break;
+        case 8:
+            mes = "Septiembre";
+            break;
+        case 9:
+            mes = "Octubre";
+            break;
+        case 10:
+            mes = "Noviembre";
+            break;
+        case 11:
+            mes = "Diciembre";
+            break;
+    }
+
+
     $('.table-inbox tbody').append(
         '<tr>\
             <td>' + getHeader(message.payload.headers, 'From') + '</td>\
@@ -70,7 +116,7 @@ function appendMessageRow(message) {
         getHeader(message.payload.headers, 'Subject') +
         '</a>\
             </td>\
-            <td>' + getHeader(message.payload.headers, 'Date') + '</td>\
+            <td>' + myDate.getDate() +" de "+ mes +" l "+myDate.getHours()+":"+myDate.getMinutes()+ '</td>\
           </tr>'
     );
     $('body').append(

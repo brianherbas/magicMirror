@@ -1,5 +1,5 @@
-$(document).ready(function() {
-//$('#notiDiv').hide(); 
+jQuery(document).ready(function() {
+jQuery('#notiDiv').hide(); 
 });
 
 var limit = 0;

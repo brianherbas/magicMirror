@@ -21,13 +21,13 @@ function cerrarNoticias() {
 
 function abrirGmail() {
     //	 
-    $('#gmailDiv').show();
+    $('.container').show();
     //
 }
 
 function cerrarGmail() {
     //	 
-    $('#gmailDiv').hide();
+    $('.container').hide();
     //
 }
 function pedirHora() {
