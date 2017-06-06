@@ -1,8 +1,14 @@
 import web #libreria para simular web-server
-import urlparse
+try:
+    from urllib.parse import urlparse
+except ImportError:
+    from urlparse import urlparse
 import json
 import requests
-import RPi.GPIO as GPIO  #libreria para usar los pines de la raspberry
+try:
+    import RPi.GPIO as GPIO  #libreria para usar los pines de la raspberry
+except ImportError:
+    
 
 def make_text(string):
     return string
