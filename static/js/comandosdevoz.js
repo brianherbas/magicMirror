@@ -2,11 +2,11 @@ $(document).ready(function() {
 responsiveVoice.setDefaultVoice("Spanish Latin American Female");
 //($('#gmailDiv').hide(); 
 //se crea una funcion
+});
 var NPinA = 17;
 var NPinB = 27;
 var NPinC = 22;
 var numero=0;
-
 
 function abrirNoticias() {
     //	 
@@ -163,4 +163,4 @@ if (annyang) {
     //comienza a escuchar
     annyang.start();
 }
-});
+

@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-var urlAjax = "http://10.3.87.97:8080/lz";
+
 
 	jQuery("#interruptor1").click(function() {
 		interruptorC(1);
@@ -12,13 +12,15 @@ var urlAjax = "http://10.3.87.97:8080/lz";
 	});
 });
 
+var urlAjax = "/sw";
+
 	function interruptor(inNum,orden,NPin)
 	{			
 		var image = document.getElementById('interruptor'+inNum);
 		var estado;
 		
 
-		/*
+		
 		jQuery.ajax({
 			url: urlAjax, //modificar porque IP es dinamica
 			type: "POST",
@@ -39,8 +41,9 @@ var urlAjax = "http://10.3.87.97:8080/lz";
 					error: function(data) {
 						console.log(data);
 					}
-		});*/
+		});
 	}
+
 
 
 	function interruptorC(inNum)

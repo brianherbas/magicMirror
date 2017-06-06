@@ -1,15 +1,18 @@
 #notiDiv {
     position: absolute;
-    width: 740px;
+    width: 53%;
     z-index: 1000;
     float: left;
     min-width: 100px;
     padding: 5px 0;
     margin-left: 10px;
     transform: rotate(-90deg);
-    top: 20;
+    top: -5%;
+    bottom:-5%;
     text-align: left;
     right: 10;
+height:960px;
+max-heigth:960px; 
 }
 iframe {
     width: 90%;
