@@ -5,6 +5,8 @@ jQuery('.container').hide();
 var clientId = '743981775055-clrerrd2cnq2adjjk4q2095srims0es8.apps.googleusercontent.com';
 var apiKey = 'AIzaSyDsjV0utgJyzmKWLJy_idJOaZyBGZbGRJA';
 var scopes = 'https://www.googleapis.com/auth/gmail.readonly';
+var voiceid =1;
+var mails= Array();
 
 
 function handleClientLoad() {
@@ -59,7 +61,9 @@ function displayInbox() {
                 'userId': 'me',
                 'id': this.id
             });
+
             messageRequest.execute(appendMessageRow);
+
         });
     });
 }
@@ -106,18 +110,20 @@ switch (myDate.getMonth()) {
             break;
     }
 
-
+mails[voiceid]=message.id; 
     $('.table-inbox tbody').append(
         '<tr>\
+	    <td>'+voiceid+'</td>\
             <td>' + getHeader(message.payload.headers, 'From') + '</td>\
-            <td>\
+            <td id="' + voiceid++ +'">\
               <a href="#message-modal-' + message.id +
-        '" data-toggle="modal" id="message-link-' + message.id + '">' +
+        '" data-toggle="modal" id="message-link-' + message.id + '" ">' +
         getHeader(message.payload.headers, 'Subject') +
         '</a>\
             </td>\
-            <td>' + myDate.getDate() +" de "+ mes +" l "+myDate.getHours()+":"+myDate.getMinutes()+ '</td>\
+            <td>' + myDate.getDate() +" de "+ mes +" l "+myDate.getHours()+":"+myDate.getMinutes()+  '</td>\
           </tr>'
+
     );
     $('body').append(
         '<div class="modal fade" id="message-modal-' + message.id +

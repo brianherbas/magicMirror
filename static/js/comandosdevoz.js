@@ -5,6 +5,7 @@ responsiveVoice.setDefaultVoice("Spanish Latin American Female");
 var NPinA = 17;
 var NPinB = 27;
 var NPinC = 22;
+var numero=0;
 
 
 function abrirNoticias() {
@@ -86,6 +87,11 @@ function apagarLuz3() {
     interruptor(3,"off",NPinC);
     //
 }
+function gmail(numero) {
+    //	 
+    $("#message-link-"+mails[numero]).click();
+    //
+}
 
 
 
@@ -139,6 +145,9 @@ if (annyang) {
         },
 		'apagar luz 3': function() {
             apagarLuz3();
+        },
+		'mail *numero': function(numero) {
+            gmail(numero);
         },
 
 
