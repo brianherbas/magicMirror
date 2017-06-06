@@ -2,7 +2,7 @@ import web #libreria para simular web-server
 import urlparse
 import json
 import requests
-#import RPi.GPIO as GPIO  #libreria para usar los pines de la raspberry
+import RPi.GPIO as GPIO  #libreria para usar los pines de la raspberry
 
 def make_text(string):
     return string
@@ -35,17 +35,19 @@ class luz():
         
     def POST(self):
 		parsed = urlparse.urlparse(web.data())
-		estado = urlparse.parse_qs(parsed.path)['orden']['NPin']
+		
+		orden = urlparse.parse_qs(parsed.path)['orden'][0]
+		NPin = int(urlparse.parse_qs(parsed.path)['NPin'][0])
   		#Definimos el sistema de numeracion que queremos(BCM o BOARD)
 		GPIO.setmode(GPIO.BCM)
 		#Definimos 'Npin' como salida
 		GPIO.setup(NPin, GPIO.OUT)
  
 		if(orden=="on"):
-		#Le damos un valor logico alto para encender el led			
+			#Le damos un valor logico alto para encender el led
 			GPIO.output(NPin, GPIO.HIGH)
 		if(orden=="off"):
-				#Le damos un valor logico bajo para apagar el led
+			#Le damos un valor logico bajo para apagar el led
 			GPIO.output(NPin, GPIO.LOW)						
 
 		
