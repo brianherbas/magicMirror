@@ -25,4 +25,27 @@ Ahora que tenemos el PIP seguiremos con la instalación de las distintas libreri
 
 	sudo pip install web.py
 
-**	
+**json** esta librería ya viene instalada con Python
+
+**urlparse** se instala con:
+	
+	sudo pip install urlparse2
+
+**requests** el comando es:
+
+	sudo pip install requests
+	
+
+Ya instalamos todas las librerías por lo que la aplicación ya está lista para funcionar. 
+Lo primero que tenemos que hacer para ejecutar el servidor web es ir a la carpeta y luego ejecutar *app.py* con python:
+
+    cd direccion_suizaMirror
+    python app.py
+    
+Al ejectuarlo nos saldrá
+
+    0.0.0.0:puerto
+    
+Por defecto el puerto es *8080*.
+
+Para poder entrar a nuestra aplicación web, vamos al navegador (preferiblemente Google Chrome), en la barra de búsquedas ingresamos localhost:8080 (reemplazar *8080* por el puerto que elegimos), presionamos *enter* y ya nos debería aparecer nuestra página.
