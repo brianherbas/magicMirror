@@ -1,17 +1,17 @@
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-      	margin-top: 10%;
+      	margin-top: 13%;
       	margin-left: 25%;
         height: 50%;
         width: 50%;
       }
       /* Optional: Makes the sample page fill the window. */
-      html, body {
+      /*html, body {
         height: 100%;
         margin: 0;
         padding: 0;
-      }
+      }*/
       .controls {
         margin-top: 10px;
         border: 1px solid transparent;
@@ -52,3 +52,7 @@
         font-size: 13px;
         font-weight: 300;
       }
+	#mapa{
+	color:#000000;
+	transform: rotate(-90deg);
+	}
