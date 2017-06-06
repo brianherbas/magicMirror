@@ -8,7 +8,7 @@ import requests
 try:
     import RPi.GPIO as GPIO  #libreria para usar los pines de la raspberry
 except ImportError:
-    
+    #import RPi.GPIO as GPIO 
 
 def make_text(string):
     return string
