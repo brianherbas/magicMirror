@@ -7,7 +7,17 @@
 |GND   |pin 6(GND)   |
 
 ## Conexión entre el relé y una lámpara:
-En el relé hay tres puertos de conexión eléctrica para cada salida: COM(common), NO(normally open), NC(normally close).
-En COM debemos conectar el positivo que va a la toma eléctrica que alimentará a la lámpara, y en uno solo de los otros dos el cable que va al
-positivo de la lámpara, dependerá de si lo conectamos a normalmente abierto,o a normalmente *cerrado si la lámpara quedara encendido o apagado
-en caso de apagarse el Raspberry. El negativo se conecta directamente de la toma eléctrica a la lámpara. 
+En el relé hay tres puertos de conexión eléctrica para cada salida:
+
+>**NO(normally open), COM(common), NC(normally close).**
+![rele](https://i1.wp.com/www.peatonet.com/wp/wp-content/uploads/2014/11/PB080196.png?w=348)
+
+
+
+
+
+>En COM debemos conectar el positivo de la toma eléctrica que alimentará la bomba de agua,      
+>lámpara o electrodoméstico, y en uno solo de los otros
+>dos el cable que va al positivo del mismo.     
+>El negativo se conecta directamente de la toma eléctrica a la lámpara, bomba de agua, etc.      
+![Connection](https://i2.wp.com/www.peatonet.com/wp/wp-content/uploads/2014/11/rele5venchufe1.jpg?resize=400%2C533)
