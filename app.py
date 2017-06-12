@@ -6,9 +6,9 @@ except ImportError:
 import json
 import requests
 try:
-    import RPi.GPIO as GPIO  #libreria para usar los pines de la raspberry
-except ImportError:
-    #import RPi.GPIO as GPIO 
+    import RPi.GPIO as GPIO
+except RuntimeError:
+    print("Error importing RPi.GPIO!  This is probably because you need superuser privileges.  You can achieve this by using 'sudo' to run your script")
 
 def make_text(string):
     return string
