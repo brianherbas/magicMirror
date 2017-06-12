@@ -34,9 +34,9 @@ class noticias():
         return requests.get("https://www.clarin.com/rss/lo-ultimo/")
 #control de los pines (17)
 class luz():
-    #def GET(self):
-        #form = my_form()
-	#	return render.luz()
+    def GET(self):
+        form = my_form()
+		return render.luz()
 		
         
     def POST(self):
