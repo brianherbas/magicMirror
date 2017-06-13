@@ -1,8 +1,8 @@
 import web #libreria para simular web-server
-try:
-    from urllib.parse import urlparse
-except ImportError:
-    from urlparse import urlparse
+#try:
+    #from urllib.parse import urlparse
+#except ImportError:
+import urlparse
 import json
 import requests
 try:
@@ -31,12 +31,12 @@ app = web.application(urls, globals())
 
 class noticias():
     def GET(self):
-        return requests.get("https://www.clarin.com/rss/lo-ultimo/")
+       return requests.get("https://www.clarin.com/rss/lo-ultimo/")
 #control de los pines (17)
 class luz():
     def GET(self):
         form = my_form()
-		return render.luz()
+        return render.luz()
 		
         
     def POST(self):
