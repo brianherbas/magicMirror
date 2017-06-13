@@ -29,6 +29,21 @@ var urlAjax = "/sw";
 			}
 		});
 	}
+
+	function estado(NPin)
+	{
+		jQuery.ajax({
+			url: urlAjax,
+			type: "POST",
+			dataType: "json",
+			data: {"NPin" : NPin},
+			success: function(data) {
+				alert(data);
+			}
+		})
+	}
+
+
 	function interruptorC(inNum,NPin)
 	{			
 		var orden;

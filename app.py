@@ -18,6 +18,7 @@ urls = (
 		'/', 'index',
 		'/sw', 'luz',
 		'/noticias', 'noticias'
+		'/estado', 'estado'
 		)
 		
 #la carpeta a donde va a buscar el index.html		
@@ -56,11 +57,18 @@ class luz():
 			#Le damos un valor logico bajo para apagar el led
 			GPIO.output(NPin, GPIO.LOW)						
 
-		
+
 #carga el render (/templates/index.html)
 class index():
     def GET(self):
         return render.index()	
+
+class estado(): 
+	def POST(self):
+		parsed = urlparse.urlparse(web.data())
+		NPin = int(urlparse.parse_qs(parsed.path)['NPin'][0])
+		estado = GPIO.input(NPin)
+		return estado
 
 	
 		
