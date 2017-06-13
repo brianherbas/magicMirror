@@ -2,13 +2,13 @@ jQuery(document).ready(function() {
 
 
 	jQuery("#interruptor1").click(function() {
-		interruptorC(1);
+		interruptorC(1,17);
 	});
 	jQuery("#interruptor2").click(function() {
-		interruptorC(2);
+		interruptorC(2,27);
 	});
 	jQuery("#interruptor3").click(function() {
-		interruptorC(3);
+		interruptorC(3,22);
 	});
 });
 
@@ -16,10 +16,29 @@ var urlAjax = "/sw";
 
 	function interruptor(inNum,orden,NPin)
 	{			
-		var image = document.getElementById('interruptor'+inNum);
-		var estado;
+		jQuery.ajax({
+			url: urlAjax, //modificar porque IP es dinamica
+			type: "POST",
+			dataType:'json',
+			data: {"orden" : orden, "NPin" : NPin},
+			success: function(data) {
+				cambiarImg(orden,inNum);
+			},
+			error: function(data) {
+				console.log(data);
+			}
+		});
+	}
+	function interruptorC(inNum,NPin)
+	{			
+		var orden;
 		
-
+		if (jQuery("#val"+inNum).text() == "Encendido") {
+			orden = "off";
+		}
+		else if (jQuery("#val"+inNum).text() == "Apagado") {
+    		orden = "on";
+		}
 		
 		jQuery.ajax({
 			url: urlAjax, //modificar porque IP es dinamica
@@ -27,53 +46,23 @@ var urlAjax = "/sw";
 			dataType:'json',
 			data: {"orden" : orden, "NPin" : NPin},
 			success: function(data) {
-				if (orden=="off") {
-					image.src = "static/images/f"+inNum+".png";
-			
-					jQuery("#val"+inNum).text("Apagado");
-				}
-				if (orden=="on") {
-					image.src = "static/images/t"+inNum+".png";
-		
-					jQuery("#val"+inNum).text("Encendido");	
-				}
-					},
-					error: function(data) {
-						console.log(data);
-					}
-		});
-	}
-
-
-
-	function interruptorC(inNum)
-	{			
-		var image = document.getElementById('interruptor'+inNum);
-		var estado;
-		
-		if (jQuery("#val"+inNum).text() == "Encendido") {
-        		image.src = "static/images/f"+inNum+".png";
-			estado = "apagado"+inNum;
-			jQuery("#val"+inNum).text("Apagado");
-		}
-		else if (jQuery("#val"+inNum).text() == "Apagado") {
-        		image.src = "static/images/t"+inNum+".png";
-			estado = "encedido"+inNum;
-			jQuery("#val"+inNum).text("Encendido");	
-		}
-		/*
-		jQuery.ajax({
-			url: urlAjax, //modificar porque IP es dinamica
-			type: "POST",
-			dataType:'json',
-			data: {"estado" : estado},
-			success: function(data) {
-				//alert(data.msg);
-				//alert(data);
+				cambiarImg(orden,inNum);
 			},
 			error: function(data) {
 				console.log(data);
 			}
-		});*/
+		});
 	}
 
+    function cambiarImg(orden,inNum)
+    {
+        var image = document.getElementById('interruptor'+inNum);
+        if (orden=="off") {
+		    image.src = "static/images/f"+inNum+".png";
+		    jQuery("#val"+inNum).text("Apagado");
+    	}
+	    else if (orden=="on") {
+	        image.src = "static/images/t"+inNum+".png";
+	        jQuery("#val"+inNum).text("Encendido");	
+	    }   
+    }
