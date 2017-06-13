@@ -33,13 +33,12 @@ function cerrarGmail() {
 }
 function pedirHora() {
     //	 
-
 	responsiveVoice.speak( document.getElementById("hora").innerHTML);
     //
 }
 function pedirTemperatura() {
     //	 
-	
+
 	var temp=document.getElementById("temperatura").innerHTML;
 	temp=temp.substring(0,temp.length-2);
 	responsiveVoice.speak( temp + " grados");
@@ -47,13 +46,11 @@ function pedirTemperatura() {
 }
 function pedirFecha() {
     //	 
-
 	responsiveVoice.speak( document.getElementById("fecha").innerHTML);
     //
 }
 function pedirClima() {
     //	 
-
 	responsiveVoice.speak( "está " + document.getElementById("clima").innerHTML);
     //
 }
@@ -92,8 +89,6 @@ function gmail(numero) {
     $("#message-link-"+mails[numero]).click();
     //
 }
-
-
 
 /*********************************************************/
 
@@ -154,6 +149,10 @@ if (annyang) {
         //{ alert('Hello world!'); } //imprime un mensaje
 
     };
+	//si lo que se dice no coincide con ninguno de los comandos, por defualt annyang responde esto
+	annyang.addCallback('resultNoMatch', function() {
+	responsiveVoice.speak("no se reconocio el comando de voz");
+});
     //permite que se muestre el debug por consola
     annyang.debug();
     //añade los comandos
@@ -161,6 +160,6 @@ if (annyang) {
     //establece el idioma de escucha en español
     annyang.setLanguage("es");
     //comienza a escuchar
-    annyang.start();
+	annyang.start({ autoRestart: true, continuous: false });
 }
 
