@@ -1,4 +1,9 @@
 # Baño Inteligente
+## Contenidos
+1. Descripción
+2. Instalación (software)
+3. Ensamblaje (ver ASSEMBLY.MD)
+
 ## Descripción
 El proyecto consiste en un espejo, que en la parte de atrás hay un Raspberry Pi 3 conectado a un monitor, el cual muestra:
 
