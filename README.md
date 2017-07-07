@@ -36,7 +36,7 @@ Ahora que tenemos el PIP seguiremos con la instalación de las distintas libreri
 	
 	sudo pip install urlparse2
 
-**requests (versión: 2.18.1 ó superior** el comando es:
+**requests (versión: 2.18.1 ó superior)** el comando es:
 
 	sudo pip install requests
 	
