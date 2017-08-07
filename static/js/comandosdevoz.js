@@ -2,6 +2,103 @@ $(document).ready(function() {
 responsiveVoice.setDefaultVoice("Spanish Latin American Female");
 //($('#gmailDiv').hide(); 
 //se crea una funcion
+$(document).keyup(function(e) {
+var key = e.key;
+switch(key)
+{
+case "q":
+	cerrarGmail();
+    abrirNoticias();
+	break;
+
+case "a":
+	cerrarNoticias();
+	break;
+	
+case "w":
+	cerrarNoticias();
+	abrirGmail();
+	break;
+	
+case "s":
+	cerrarGmail();
+	break;
+	
+case "e":
+	 pedirHora();
+	 break;
+	 
+case "d":
+	 pedirFecha();
+	 break;
+	 
+case "r":
+	 pedirTemperatura();
+	 break;
+	 
+case "f":
+	 pedirClima();
+	 break;
+	 
+case "t":
+	 prenderLuz1();
+	 break;
+	 
+case "g":
+	 apagarLuz1();
+	 break;
+	 
+case "y":
+	 prenderLuz2();
+	 break;
+	 
+case "h":
+	 apagarLuz2();
+	 break;
+
+case "1":
+	gmail(1);
+	break;
+	
+case "2":
+	gmail(2);
+	break;
+	
+case "3":
+	gmail(3);
+	break;
+		
+case "4":
+	gmail(4);
+	break;
+		
+case "5":
+	gmail(5);
+	break;
+		
+case "6":
+	gmail(6);
+	break;
+		
+case "7":
+	gmail(7);
+	break;
+		
+case "8":
+	gmail(8);
+	break;
+		
+case "9":
+	gmail(9);
+	break;
+		
+case "0":
+	gmail(10);
+	break;
+}
+});
+
+
 });
 var NPinA = 17;
 var NPinB = 27;
@@ -102,21 +199,21 @@ if (annyang) {
     //en este caso decimos cualquier cosa, eso se guarda en etc
     //y comienza a escuchar valor y llama a la funcion dropdown
     var commands = {
-        'abrir noticias': function() {
+        'mostrar noticias': function() {
             cerrarGmail();
             abrirNoticias();
         },
         'cerrar noticias': function() {
             cerrarNoticias();
         },
-        'abrir gmail': function() {
+        'abrir correo': function() {
             cerrarNoticias();
             abrirGmail();
         },
-        'cerrar gmail': function() {
+        'cerrar correo': function() {
             cerrarGmail();
         },
-		'qué hora es': function() {
+		'hora': function() {
             pedirHora();
         },
 		'temperatura': function() {
@@ -128,16 +225,16 @@ if (annyang) {
 		'clima': function() {
             pedirClima();
         },
-		'prender luz 1': function() {
+		'prender luz': function() {
             prenderLuz1();
         },
-		'apagar luz 1': function() {
+		'apagar luz': function() {
             apagarLuz1();
         },
-		'prender luz 2': function() {
+		'abrir canilla': function() {
             prenderLuz2();
         },
-		'apagar luz 2': function() {
+		'cerrar canilla': function() {
             apagarLuz2();
         },
 		'prender luz 3': function() {
@@ -149,6 +246,8 @@ if (annyang) {
 		'mail *numero': function(numero) {
             gmail(numero);
         },
+		
+
 
 
         //{ alert('Hello world!'); } //imprime un mensaje
