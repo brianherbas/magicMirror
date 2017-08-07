@@ -19,7 +19,7 @@ Todas estas funciones son controladas mediante comandos de voz.
 
 Para instalar el Sistema Operativo Raspbian en el Raspberry se puede usar [NOOBS](https://www.raspberrypi.org/documentation/installation/noobs.md).
 
-Python ya viene instalado en el Raspbian, pero en caso de no tenerlo podemos ver [esta página](https://tecadmin.net/install-python-2-7-on-ubuntu-and-linuxmint/), o sino descargar el instalador en la [página oficial de Python](https://www.python.org/downloads/). 
+Python ya viene instalado en el Raspbian, pero en caso de no tenerlo podemos ver [esta página](https://tecadmin.net/install-python-2-7-on-ubuntu-and-linuxmint/), o sino descargar el instalador en la [página oficial de Python](https://www.python.org/downloads/) ver.2.7.x. 
 Luego para instalar los paquetes necesitaremos el PIP, que es un administrador de paquetes especialmente para Python. Para poder bajarlo usaremos el siguiente comando:
 
 	sudo apt-get install python-pip
