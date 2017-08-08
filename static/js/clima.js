@@ -41,6 +41,10 @@ function startClima() {
                 clima = "Lluvioso";
                 urlimg = "nube2.png";
                 break;
+			case "Mist":
+                clima = "Nublado";
+                urlimg = "nube3.png";
+                break;
         }
 	urlimg = urlimgCONF+urlimg;
 
