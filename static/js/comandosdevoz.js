@@ -226,16 +226,20 @@ if (annyang) {
             pedirClima();
         },
 		'prender luz': function() {
-            prenderLuz1();
+	    apagarLuz1();
+            
         },
 		'apagar luz': function() {
-            apagarLuz1();
+	    prenderLuz1();
+            
         },
 		'abrir canilla': function() {
-            prenderLuz2();
+	    apagarLuz2();
+            
         },
 		'cerrar canilla': function() {
-            apagarLuz2();
+	    prenderLuz2();
+            
         },
 		'prender luz 3': function() {
             prenderLuz3();

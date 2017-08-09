@@ -1,19 +1,26 @@
 #notiDiv {
-    position: absolute;
-    width: 53%;
+    margin-left:700px;
+    margin-bottom:100px;
+    width: 45%;
     z-index: 1000;
-    float: left;
-    min-width: 100px;
-    padding: 5px 0;
-    margin-left: 10px;
     transform: rotate(-90deg);
-    top: -5%;
-    bottom:-5%;
     text-align: left;
-    right: 10;
-height:960px;
-max-heigth:960px; 
 }
+
+#notiDiv h1 {
+    font-size:1px;
+    margin-bottom:-30px;
+}
+
+#notiDiv h2 {
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+#notiDiv p {
+	margin-top: 20px!important;
+}
+
 iframe {
     width: 90%;
     border: 0;
@@ -29,12 +36,13 @@ iframe {
     transform: rotate(-90deg);
     text-align: left;
     right: 0;
-    top: 40;
+    top: 140;
 }
 body {
     background: #000000;
     color: #FFFFFF;
     font: 2em/1 "HKGroteskLight", "Segoe UI Light", Tahoma, sans-serif;
+    overflow:hidden;
     /*
 transform: rotate(-90deg);
 */
