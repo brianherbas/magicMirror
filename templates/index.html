@@ -25,61 +25,66 @@
 	</head>
 	<body>
 		<!--BLOQUE DE FECHA Y HORA-->
-		<div id="divhorafecha">
-			<div id="hora">
+
+		<div class='row'>			
+			<div style="margin-top: 50px;margin-left: : 200px">
 			
 			</div>
-			<div id="fecha"></div>
-		</div>
-		<!--FIN BLOQUE DE FECHA Y HORA-->
-		<!--BLOQUE DEL CLIMA-->
-		<div class="divweather" onLoad="setInterval('contador()',1000);">
-			<span><img id="myImg"  width="64" height="64"></span>
-			<div id="nube" align="">
-				<div id="temperatura" align="left">
+			<div style="margin-bottom: 50px;margin-left: 100px" id="divhorafecha">
+				<div id="hora">				
 				</div>
-				<div id="clima"></div>
-				</img>
-			</div>		
-		</div>
-		<!--FIN BLOQUE DEL CLIMA-->
-		<!-- INTERRUPTORES -->
-		<img id="interruptor1" src="static/images/f1.png" width="100" height="100">
-		<p id="val1"></p>
-		
-		<img id="interruptor2" src="static/images/f2.png" width="100" height="100">
-		<p id="val2"></p>
-		
-		<!-- FIN INTERRUPTORES -->
-		<!--BLOQUE DE NOTICIAS-->
-		<div class="botonNoticiasyMai">
-			<div class='row'>
-				<div class=''>
-				</div>
-				<div id="notiDiv">
-					<h2>Noticias: </h2>
-					<div id="itemNot">
+				<div id="fecha"></div>
+			</div>
+			<!--FIN BLOQUE DE FECHA Y HORA-->
+			<!--BLOQUE DEL CLIMA-->
+			<div style="margin-left: 100px" class="divweather" onLoad="setInterval('contador()',1000);">
+				<span><img style="margin-left: 50px;margin-top: 30px" id="myImg"  width="64" height="64"></span>
+				<div  style="margin-left: 100px;margin-top: 50px" id="nube" align="">
+					<div id="temperatura" align="left">
+					</div>
+					<div id="clima"></div>
+					</img>
+				</div>		
+			</div>
+			<!--FIN BLOQUE DEL CLIMA-->
+			<!-- INTERRUPTORES -->
+			<img style="margin-top: 50px;margin-left: 100px" id="interruptor1" src="static/images/f1.png" width="100" height="100">
+			<p style="margin-top: 90px;margin-left: 160px" id="val1"></p>
+			
+			<img style="margin-top: 50px;margin-left: 100px" id="interruptor2" src="static/images/f2.png" width="100" height="100">
+			<p style="margin-top: 90px;margin-left: 230px" id="val2"></p>
+			
+			<!-- FIN INTERRUPTORES -->
+			<!--BLOQUE DE NOTICIAS-->
+			<div style="margin-left: 100px" class="botonNoticiasyMai">
+				<div class='row'>
+					<div class=''>
+					</div>
+					<div id="notiDiv">
+						<h2>Noticias: </h2>
+						<div id="itemNot">
+						</div>
 					</div>
 				</div>
 			</div>
+			<!--FIN BLOQUE DE NOTICIAS-->
+			<!--BLOQUE DE GMAIL-->
+			<div style="margin-right: 120px" class="container" id="#gmailDiv">
+				<button id="authorize-button" class="btn btn-primary hidden">Gmail</button>
+				<table class="table  table-inbox hidden">
+					<thead>
+						<tr>
+							<th>Nro:</th>
+							<th>De:</th>
+							<th>Asunto:</th>
+							<th>Fecha:</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+			<!--FIN BLOQUE DE GMAIL-->
 		</div>
-		<!--FIN BLOQUE DE NOTICIAS-->
-		<!--BLOQUE DE GMAIL-->
-		<div class="container" id="#gmailDiv">
-			<button id="authorize-button" class="btn btn-primary hidden">Gmail</button>
-			<table class="table  table-inbox hidden">
-				<thead>
-					<tr>
-						<th>Nro:</th>
-						<th>De:</th>
-						<th>Asunto:</th>
-						<th>Fecha:</th>
-					</tr>
-				</thead>
-				<tbody></tbody>
-			</table>
-		</div>
-		<!--FIN BLOQUE DE GMAIL-->
 		
 	</body>
 </html>

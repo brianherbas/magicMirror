@@ -155,7 +155,7 @@ function pedirClima() {
     //
 }
 function prenderLuz1() {
-    //	 
+    //	     
     interruptor(1,"on",NPinA);
     //
 }

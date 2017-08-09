@@ -18,15 +18,14 @@ var urlAjax = "/sw";
 	{			
 		var image = document.getElementById('interruptor'+inNum);
 		var estado;
-		
 
 		
 		jQuery.ajax({
 			url: urlAjax, //modificar porque IP es dinamica
 			type: "POST",
-			dataType:'json',
+			//dataType:'json',
 			data: {"orden" : orden, "NPin" : NPin},
-			success: function(data) {
+			success: function(data) {				
 				if (orden=="off") {
 					image.src = "static/images/f"+inNum+".png";
 			
@@ -37,10 +36,10 @@ var urlAjax = "/sw";
 		
 					jQuery("#val"+inNum).text("Encendido");	
 				}
-					},
-					error: function(data) {
-						console.log(data);
-					}
+			},
+			error: function(data) {
+				console.log(data);
+			}
 		});
 	}
 
