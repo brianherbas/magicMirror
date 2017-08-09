@@ -126,7 +126,7 @@ mails[voiceid]=message.id;
 
     );
     $('body').append(
-        '<div class="modal fade" id="message-modal-' + message.id +
+        '<div style="margin-left:100px;margin-top: 80px" class="modal fade" id="message-modal-' + message.id +
         '" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">\
             <div class="modal-dialog modal-lg">\
               <div class="modal-content">\
