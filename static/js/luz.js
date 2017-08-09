@@ -26,15 +26,19 @@ var urlAjax = "/sw";
 			//dataType:'json',
 			data: {"orden" : orden, "NPin" : NPin},
 			success: function(data) {				
-				if (orden=="off") {
-					image.src = "static/images/f"+inNum+".png";
-			
-					jQuery("#val"+inNum).text("Apagado");
-				}
 				if (orden=="on") {
-					image.src = "static/images/t"+inNum+".png";
-		
-					jQuery("#val"+inNum).text("Encendido");	
+					image.src = "static/images/f"+inNum+".png";			
+					if(inNum == 1)
+						jQuery("#val"+inNum).text("Apagado");
+					if(inNum == 2)			
+						jQuery("#val"+inNum).text("Cerrado");
+				}
+				if (orden=="off") {
+					image.src = "static/images/t"+inNum+".png";		
+					if(inNum == 1)
+						jQuery("#val"+inNum).text("Encendido");
+					if(inNum == 2)			
+						jQuery("#val"+inNum).text("Abierto");
 				}
 			},
 			error: function(data) {
