@@ -20,4 +20,4 @@ En el relé hay tres puertos de conexión eléctrica para cada salida:
 >lámpara o electrodoméstico, y en uno solo de los otros
 >dos el cable que va al positivo del mismo.     
 >El negativo se conecta directamente de la toma eléctrica a la lámpara, bomba de agua, etc.      
-![Connection](https://gitlab.com/17610/suizaMirror/blob/develop/static/images/DiagramaFullGpio.jpg)
+![Connection](https://gitlab.com/17610/suizaMirror/raw/develop/static/images/DiagramaFullGpio.jpg)
