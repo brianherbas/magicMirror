@@ -1,0 +1,41 @@
+#val1 {
+	position: absolute;
+	top: 6%;
+	left: 11%;
+	text-align: center;
+	transform: rotate(-90deg);
+	/*display: none;*/
+}
+#val2 {
+	position: absolute;
+	top: 6%;
+	left: 16%;
+	text-align: center;
+	transform: rotate(-90deg);
+}
+#val3 {
+	position: absolute;
+	top: 6%;
+	left: 21%;
+	text-align: center;
+	transform: rotate(-90deg);
+}
+
+#interruptor1
+{
+	position: absolute;
+	top: 6%;
+	left: 10%;
+}
+#interruptor2
+{
+	position: absolute;
+	top: 5%;
+	left: 18%;	
+}
+#interruptor3
+{
+	position: absolute;
+	top: 5%;
+	left: 25%;	
+}
