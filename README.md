@@ -1,3 +1,4 @@
+# MagicMirror
 # Baño Inteligente
 ## Contenidos
 1. Descripción
@@ -42,9 +43,9 @@ Ahora que tenemos el PIP seguiremos con la instalación de las distintas libreri
 	
 
 Ya instalamos todas las librerías por lo que la aplicación ya está lista para funcionar. 
-Lo primero que tenemos que hacer para ejecutar el servidor web es ir a la carpeta y luego ejecutar *app.py* con python:
+Lo primero que tenemos que hacer para ejecutar el servidor web es ir a la carpeta raíz del proyecto y luego ejecutar *app.py* con python:
 
-    cd direccion_suizaMirror
+    cd magicMirror
     python app.py
     
 Al ejectuarlo nos saldrá
@@ -54,3 +55,13 @@ Al ejectuarlo nos saldrá
 Por defecto el puerto es *8080*.
 
 Para poder entrar a nuestra aplicación web, vamos al navegador (preferiblemente Google Chrome), en la barra de búsquedas ingresamos localhost:8080 (reemplazar *8080* por el puerto que elegimos), presionamos *enter* y ya nos debería aparecer nuestra página.
+
+
+**_______________________________Source__________________________________**
+
+**Files to the webpage when making a Magic Mirror.**
+
+**These files are originally created by Christoffer Orre at PC för alla.**
+**[http://pcforalla.idg.se/2.1054/1.601411/sa-bygger-du-en-magisk-spegel-som-visar-klockslag-och-nyheter/sida/3/finjustering-innan-montering]**
+
+**I've translated some of it to english and put them here to make them avalible without having to search for them on a Swedish site.**
